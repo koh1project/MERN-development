@@ -3,10 +3,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import { UsersRouter } from './routes';
+import { router as userRouter } from './routes/users';
 import bodyParser from 'body-parser';
-
-import axios from 'axios';
 
 dotenv.config();
 const port = process.env.PORT;
@@ -16,7 +14,7 @@ export const app = express();
 
 app.use('*', cors());
 app.use(bodyParser.json());
-app.use('/users', UsersRouter);
+app.use('/users', userRouter);
 
 // mongoose.connect(`${mongo_uri}`, (err) => {
 //   if (err) {
