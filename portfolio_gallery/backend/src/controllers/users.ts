@@ -1,7 +1,7 @@
+import { Request, Response } from 'express';
 import * as mongoose from 'mongoose';
 
 import { User, UserSchema } from '../models/user';
-import { Request, Response } from 'express';
 
 const User = mongoose.model<User>('User', UserSchema);
 //@TODO: Remove after checking basic connection from browser to database

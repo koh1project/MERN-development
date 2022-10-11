@@ -1,0 +1,47 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 2020,
+		"sourceType": "module"
+	},
+	"plugins": [
+		"@typescript-eslint",
+		"simple-import-sort",
+		"prettier"
+	],
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended"
+	],
+	"rules": {
+		"@typescript-eslint/ban-ts-comment": "off",
+		"simple-import-sort/exports": "error",
+		"simple-import-sort/imports": [
+			"error",
+			{
+				"groups": [
+					[
+						"^express",
+						"^@?\\w"
+					],
+					[
+						"^apollo.*"
+					],
+					[
+						"^\\./(?=.*/)(?!/?$)",
+						"^\\.(?!/?$)",
+						"^\\./?$"
+					]
+				]
+			}
+		]
+	},
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"ignorePatterns": [
+		"**/*.js"
+	]
+}

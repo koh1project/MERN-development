@@ -1,7 +1,8 @@
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
+
 import { gql } from 'apollo-server';
-import { createTestClient } from 'apollo-server-testing';
+
 import { server } from './apolloServer';
 
 const mockServer = setupServer(
