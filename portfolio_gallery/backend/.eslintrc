@@ -16,6 +16,7 @@
 	],
 	"rules": {
 		"@typescript-eslint/ban-ts-comment": "off",
+		"@typescript-eslint/no-empty-function": "off",
 		"simple-import-sort/exports": "error",
 		"simple-import-sort/imports": [
 			"error",
