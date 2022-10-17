@@ -1,8 +1,8 @@
-export const resolvers = {
+import { Resolvers } from './resolvers-types';
+export const resolvers: Resolvers = {
   Query: {
-    hello: (_: any, { name }: any) => `Hello ${name}!`,
-    user: (_: any, { id }: { id: string }) => ({
-      id: id,
+    user: (parent, args, context, info) => ({
+      id: args.id,
       name: 'name',
       email: 'email',
     }),

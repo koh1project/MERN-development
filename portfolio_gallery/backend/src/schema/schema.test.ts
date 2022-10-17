@@ -1,30 +1,9 @@
-import assert from 'node:assert';
-
 import { ApolloServer, gql } from 'apollo-server';
 
 import { typeDefs } from './query';
 import { resolvers } from './resolvers';
 
 beforeAll(() => {});
-
-test('Should return test data', async () => {
-  const testServer = new ApolloServer({
-    typeDefs,
-    resolvers,
-  });
-
-  const response = await testServer.executeOperation({
-    query: gql`
-      query Hello($name: String) {
-        hello(name: $name)
-      }
-    `,
-    variables: { name: 'World' },
-  });
-
-  console.log(response.data?.hello);
-  assert(response.data?.hello === 'Hello World!');
-});
 
 test('Should return user data', async () => {
   const testServer = new ApolloServer({
