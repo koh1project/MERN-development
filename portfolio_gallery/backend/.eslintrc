@@ -12,9 +12,16 @@
 	"extends": [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
-		"plugin:prettier/recommended"
+		"plugin:prettier/recommended",
+		"plugin:import/recommended"
 	],
 	"rules": {
+		"import/newline-after-import": [
+			"error",
+			{
+				"count": 1
+			}
+		],
 		"@typescript-eslint/ban-ts-comment": "off",
 		"@typescript-eslint/no-empty-function": "off",
 		"@typescript-eslint/ban-types": "off",
@@ -45,5 +52,17 @@
 	},
 	"ignorePatterns": [
 		"**/*.js"
-	]
+	],
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [
+					".js",
+					".jsx",
+					".ts",
+					".tsx"
+				]
+			}
+		}
+	}
 }
