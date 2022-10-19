@@ -1,0 +1,14 @@
+{
+  "name": "apprenticeship_to_master",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/koh1project/apprenticeship_to_master.git",
+  "author": "Koichi <koichi89592@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^8.0.0"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  }
+}
