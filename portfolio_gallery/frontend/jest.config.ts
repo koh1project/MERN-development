@@ -23,6 +23,12 @@ const customJestConfig: JestConfigWithTsJest = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
+  globals: {
+    'ts-jest': {
+      tsconfig: '<rootDir>/tsconfig.spec.json',
+      diagnostics: false,
+    },
+  },
 };
 
 export default createJestConfig(customJestConfig);
