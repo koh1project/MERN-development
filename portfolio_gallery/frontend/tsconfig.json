@@ -23,6 +23,12 @@
       "node",
       "@types/testing-library__jest-dom"
     ],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
   },
   "include": [
     "next-env.d.ts",
@@ -30,9 +36,7 @@
     "**/*.tsx"
   ],
   "exclude": [
-    "node_modules",
-    "cypress",
-    "**/*.spec.ts",
-    "**/*.spec.tsx"
+    "**/*.spec.tsx",
+    "node_modules/"
   ]
 }

@@ -7,9 +7,12 @@
   "plugins": [
     "@typescript-eslint",
     "simple-import-sort",
+    "import",
     "prettier"
   ],
   "extends": [
+    "next",
+    "next/core-web-vitals",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
@@ -65,14 +68,7 @@
   ],
   "settings": {
     "import/resolver": {
-      "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
-      }
+      "typescript": {}
     }
   }
 }
