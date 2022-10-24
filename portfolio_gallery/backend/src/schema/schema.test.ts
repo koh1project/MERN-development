@@ -5,7 +5,7 @@ import { resolvers } from './resolvers';
 
 beforeAll(() => {});
 
-test('Should return user data', async () => {
+test.skip('Should return user data', async () => {
   const testServer = new ApolloServer({
     typeDefs,
     resolvers,
