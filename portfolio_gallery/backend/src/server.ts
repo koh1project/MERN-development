@@ -1,12 +1,11 @@
-import { server } from './schema/apolloServer';
 import express from 'express';
-import dotenv from 'dotenv';
-import cors from 'cors';
-import mongoose from 'mongoose';
-import { UsersRouter } from './routes';
 import bodyParser from 'body-parser';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import mongoose from 'mongoose';
 
-import axios from 'axios';
+import { router as userRouter } from './routes/users';
+import { server } from './schema/apolloServer';
 
 dotenv.config();
 const port = process.env.PORT;
@@ -16,7 +15,7 @@ export const app = express();
 
 app.use('*', cors());
 app.use(bodyParser.json());
-app.use('/users', UsersRouter);
+app.use('/users', userRouter);
 
 // mongoose.connect(`${mongo_uri}`, (err) => {
 //   if (err) {
