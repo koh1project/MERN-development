@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# For increasing in the number of projects. It makes getting back to the project root easier: cd $REPOSITORY_ROOT
+REPOSITORY_ROOT=$(pwd)
+
+#Backend
+cd $REPOSITORY_ROOT/portfolio_gallery/backend
+
+yarn prettier
+
+yarn lint
+
+yarn test -ci
+
+#Frontend
+cd $REPOSITORY_ROOT/portfolio_gallery/Frontend
+
+yarn lint
+
+yarn test:ci
